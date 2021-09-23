@@ -17,12 +17,11 @@ function get_Random_Number()
         if (!in_array($random, $numbers)) {
             $numbers[] = $random;
         }
-        var_dump($numbers);
     } while (count($numbers) < 15);
+    return $numbers;
 }
-
-get_Random_Number();
-
+// risultato funzione
+$random_Numbers = get_Random_Number();
 
 ?>
 
@@ -37,6 +36,12 @@ get_Random_Number();
 </head>
 
 <body>
+
+    <ul>
+        <?php foreach ($random_Numbers as $number) : ?>
+            <li> <?php echo $number ?> </li>
+        <?php endforeach; ?>
+    </ul>
 
 </body>
 
