@@ -14,17 +14,17 @@ Passare come parametri GET name, mail e age e verificare (cercando i metodi che 
 
 // verifica che il name non sia più lungo di 3 caratteri  
 if (strlen($_GET['name']) < 3) {
-    echo '<li>' . 'Accesso negato,nome troppo corto' . '</li>';
+    echo '<li>' . 'Accesso negato, nome troppo corto' . '</li>';
 }
 
 // verifica che la mail contenga almeno . e @
-if (strpos($_GET['email'], '@',) == false || strpos($_GET['email'], '.',) == false) {
-    echo '<li>' . 'Accesso negato,mail non valida' . '</li>';
+elseif (strpos($_GET['email'], '@',) == false || strpos($_GET['email'], '.',) == false) {
+    echo '<li>' . 'Accesso negato, mail non valida' . '</li>';
 }
 
 // verifica che sia un numero
-if (is_numeric($_GET['age']) == false) {
-    echo '<li>' . 'Accesso negato,non è un numero' . '</li>';
+elseif (is_numeric($_GET['age']) == false) {
+    echo '<li>' . 'Accesso negato, non è un numero' . '</li>';
 } else {
     echo 'Accesso riuscito';
 }
