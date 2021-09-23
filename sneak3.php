@@ -18,15 +18,16 @@ if (strlen($_GET['name']) < 3) {
 }
 
 // verifica che la mail contenga almeno . e @
-elseif (strpos($_GET['email'], '@',) == false || strpos($_GET['email'], '.',) == false) {
+if (strpos($_GET['email'], '@',) == false || strpos($_GET['email'], '.',) == false) {
     echo '<li>' . 'Accesso negato, mail non valida' . '</li>';
 }
 
 // verifica che sia un numero
-elseif (is_numeric($_GET['age']) == false) {
+if (settype($_GET['age'], 'int') == false) {
     echo '<li>' . 'Accesso negato, non è un numero' . '</li>';
 } else {
     echo 'Accesso riuscito';
 }
+
 
 // 
