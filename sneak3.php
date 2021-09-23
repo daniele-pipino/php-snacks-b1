@@ -22,6 +22,7 @@ if (strpos($_GET['email'], '@',) == false || strpos($_GET['email'], '.',) == fal
     echo '<li>' . 'Accesso negato,mail non valida' . '</li>';
 }
 
+// verifica che sia un numero
 if (is_numeric($_GET['age']) == false) {
     echo '<li>' . 'Accesso negato,non è un numero' . '</li>';
 } else {
